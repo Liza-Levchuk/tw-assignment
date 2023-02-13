@@ -1,0 +1,32 @@
+# What's the difference between push, pull, and fetch?
+
+| Command   | Description                                                                               | For more information see                  |
+|-----------|-------------------------------------------------------------------------------------------|----------------------------------------|
+| git-pull  | Uploads your local branch commits to the corresponding remote branch.                     | https://github.com/git-guides/git-pull |
+| git-push  | Updates your current local working branch with any changes that are on the remote branch. | https://github.com/git-guides/git-push |
+| git-fetch | Downloads the data from one or more repositories without integrating it into your working files. Use fetch to see what's changed in a remote repo without making any changes to your files. | https://git-scm.com/docs/git-fetch     |
+
+
+### What's the difference between git-push and git-pull?
+
+`git push` checks your current branch to see whether there's a tracking branch for a remote repository connected to it, and pushes the changes from your branch to the remote branch. This is how code is shared with a remote repository. You can think of it as "make the remote branch resemble my local branch". 
+
+`git pull` checks the remote branch for changes and merges them with your local current branch.
+
+
+### What can I do if a push fails?
+What can I do if a push fails?
+If a push fails, you can synchronize your local branch with the remote branch by using either:
+- git-pull, to check for changes on the remote branch and update your local branch.
+- git-fetch and git-merge, to check for changes on the remote branch so you can review them, and then merge the changes into your local branch when you're ready to.
+
+
+### What does fetch and merge do?
+git-fetch checks your current branch to see if there's a tracking branch. If there is, git looks for changes in the remote branch, and pulls them into the tracking branch without changing your local branch. 
+
+To add the changes to your local branch, you use `git merge origin/master` (for the "master" branch) to merge the changes into your branch.
+
+
+### Why would I do a fetch and merge instead of a pull?
+If you want to check the changes before you merge them into your branch, do a fetch and then a merge. By doing a fetch you can see the changes before merging them into your branch.
+
