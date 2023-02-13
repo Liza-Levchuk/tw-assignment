@@ -15,7 +15,10 @@
 
 
 ### What can I do if a push fails?
-If a push fails, you can synchronize your local branch with the remote branch by using either git-pull, or git-fetch and git-merge.
+What can I do if a push fails?
+If a push fails, you can synchronize your local branch with the remote branch by using either:
+- git-pull, to check for changes on the remote branch and update your local branch.
+- git-fetch and git-merge, to check for changes on the remote branch so you can review them, and then merge the changes into your local branch when you're ready to.
 
 
 
